@@ -1,4 +1,6 @@
-package demo
+package demo.client
+
+import demo.common.CoreModel
 
 class Client {
 	companion object {
