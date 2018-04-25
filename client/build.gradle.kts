@@ -5,7 +5,7 @@ apply {
 }
 
 dependencies {
-	"compile"(project(":common"))
+	"expectedBy"(project(":common"))
 
 	"compile"(kotlin("stdlib-jdk8"))
 
