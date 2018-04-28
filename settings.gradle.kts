@@ -1,1 +1,3 @@
-include("common", "client")
+include("common")
+include("client-jvm")
+include("client-js")

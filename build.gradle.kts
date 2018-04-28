@@ -7,13 +7,16 @@ tasks.withType<Wrapper> {
 
 buildscript {
 	val kotlinVersion: String by extra
+	val kotlinxSerializationVersion: String by extra
 
 	repositories {
 		jcenter()
+		maven(url = "https://kotlin.bintray.com/kotlinx")
 	}
 
 	dependencies {
 		classpath(kotlin("gradle-plugin", kotlinVersion))
+		classpath("org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$kotlinxSerializationVersion")
 	}
 }
 
@@ -25,6 +28,7 @@ allprojects {
 
 	repositories {
 		jcenter()
+		maven(url = "https://kotlin.bintray.com/kotlinx")
 	}
 
 	afterEvaluate {
