@@ -17,6 +17,7 @@ buildscript {
 	dependencies {
 		classpath(kotlin("gradle-plugin", kotlinVersion))
 		classpath("org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$kotlinxSerializationVersion")
+		classpath("org.akhikhl.gretty:gretty:latest.release")
 	}
 }
 
