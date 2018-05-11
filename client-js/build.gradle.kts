@@ -21,4 +21,7 @@ dependencies {
 	"expectedBy"(project(":common"))
 
 	"compile"(kotlin("stdlib-js"))
+	"compile"(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-runtime-js")
+
+	"testCompile"(kotlin("test-js"))
 }

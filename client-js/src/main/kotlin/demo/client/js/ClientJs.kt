@@ -1,6 +1,7 @@
 package demo.client.js
 
-import demo.common.CoreModel
+import demo.common.DataOne
+import demo.common.ParentModel
 
 fun main(args: Array<String>) {
 	ClientJs()
@@ -8,6 +9,6 @@ fun main(args: Array<String>) {
 
 class ClientJs {
 	init {
-		println(CoreModel(s = "test-js"))
+		println(ParentModel(s = "test-js", data = DataOne(p0 = "ps")))
 	}
 }

@@ -8,7 +8,11 @@ apply {
 
 dependencies {
 	"compile"(kotlin("stdlib-common"))
-	"implementation"(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-runtime")
+	"compile"(group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-runtime")
+
+	"testCompile"(kotlin("test-annotations-common"))
+	"testCompile"(kotlin("test"))
+	"testCompile"(kotlin("test-junit"))
 }
 
 tasks["compileKotlinCommon"].enabled = false

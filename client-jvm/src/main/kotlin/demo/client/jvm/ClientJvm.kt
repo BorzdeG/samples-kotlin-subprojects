@@ -1,24 +1,22 @@
 package demo.client.jvm
 
-import demo.common.ChildModel
-import demo.common.CoreModel
+import demo.common.DataOne
 import demo.common.ParentModel
 import kotlinx.serialization.json.JSON
 
 fun main(args: Array<String>) {
-	val coreModel = CoreModel(s = "test")
-	println("<:: raw")
-	println(coreModel)
+	val dataOne = DataOne(p0 = "p1")
+	val parentModel = ParentModel(s = "test", data = dataOne)
+
 	println("<:: JSON.stringify")
-	val jsonCoreModel = JSON.stringify(coreModel)
-	println("json: $jsonCoreModel")
-	println(">:: JSON.parse")
-	println(JSON.parse<CoreModel>(jsonCoreModel))
-//
-	val parentModel = ParentModel(f = "value", childModel = ChildModel(cf = "cf"))
-	println("<:: JSON.stringify")
+
+	val jsonDataOne = JSON.stringify(dataOne)
+	println("dataOne: $jsonDataOne")
+
 	val jsonParentModel = JSON.stringify(parentModel)
-	println("json: $jsonParentModel")
+	println("jsonParentModel: $jsonParentModel")
+
 	println(">:: JSON.parse")
+	println(JSON.parse<DataOne>(jsonDataOne))
 	println(JSON.parse<ParentModel>(jsonParentModel))
 }
